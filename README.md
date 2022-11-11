@@ -106,11 +106,191 @@ console.log(calculator(5, 2, add));
 
 Higher order function:
 
-a function which takes another function as an argument returns another out  is called higher order function.
-we call any function that does that is a higher order function
+A higher order function is a function that takes at least one function as an input and/or returns a function as an output.
 
 
 here above calculator can be called as an higher order function
+
+
+
+Callbacks and higher-order functions simplify our code and keep it DRY.
+
+
+
+asynchronous javascript:
+
+hoisting in js
+scope  chainin js
+lexical scope in js
+strict mode in js
+this keyword
+closure
+what is asynchronous javascript
+what is event loop
+
+
+hoisting in js:
+
+creation and execution phases
+
+in js all the variables and functions declartions moved to the top  before they got executed
+
+
+
+for e.g:
+console.log(myname);
+var myname;
+myname="thapa";
+
+output: undefined.
+
+
+what is scope chain and lexical scoping in js?
+
+scope chain is used to resolve the value of variable in js
+scope chain in js is lexically defined 
+at the top global scope which is window object
+lexical scoping means inner function can get access to their parent functions variables but vice versa is not true
+
+example:
+
+let a = 'hello guys'; // global scope
+
+function first() {
+  let b = 'how are you?';
+  function second() {
+    let c = 'hi';
+    console.log(a + b + c);
+  }
+  second();
+  //console.log(a+b+c); // c is not defined here
+}
+first();
+
+what is closures in js?
+
+a closure in js gives access to an outer function's scope from an inner function.
+
+
+example:
+
+function outer(a){
+  let b=5;
+  function inner(){
+    console.log(`sum is ${a+b}`)
+  }
+  return inner;
+}
+
+let closure=outer(3);
+closure();
+
+
+Use strict mode in js:
+
+
+"use strict"
+
+
+x="vinode"
+console.log(x);
+
+output:x is not defined;
+
+
+
+
+x="vinode"
+console.log(x);
+
+output:vinode;
+
+
+
+difference between synchronous and asynchronous js:
+
+sync program:
+function one() {
+  console.log('func 1 is called');
+}
+function two() {
+  console.log('func 2 is called');
+  one();
+  console.log('func 1 is called again');
+}
+
+two();
+one();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
