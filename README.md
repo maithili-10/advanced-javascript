@@ -220,19 +220,58 @@ function two() {
 }
 
 two();
-one();
 
 
 
+output:
+
+func 2 is called
+func 1 is called
+func 1 is called again
+func 1 is called
 
 
+synchronous programming means only one task at a time that means after function 2 gets executed only function 1 gets executed it doesnt matter how much time it takes also after that only func 1 gets executed.
+for e.g: 
+
+1 work =10 min
+2 work = 10 s
+
+after first work only second work gets executed.
 
 
+to overcome this asynchronous programming came into picture.
+
+async program:
 
 
+if it is async 1work=10 min and 2work=5s second work executed first and then tasks gets executed parallelly,no need to wait anywhere.
 
 
+for e.g if we take facebook or instagram if we want to like or share something u need not wait till the video completes u can do it parallely this is the best example of asynchronous programming.
 
+e.g
+
+
+const func2 = () => {
+  setTimeout(() => {
+    console.log('func 2 is called');
+  }, 2000);
+};
+
+const func1 = () => {
+  console.log('func 1 is called');
+  func2();
+  console.log('func1 is called again');
+};
+
+func1();
+
+
+now here first func 1 is called then it goes inside and then first console.log is printed and fun c2 is called but it is set for 2 sec now the task wont stop third console.log is printed and then func 2 is run.
+
+
+this way tasks would continue.
 
 
 
