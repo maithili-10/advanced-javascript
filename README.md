@@ -276,10 +276,25 @@ this way tasks would continue.
 
 
 
+Event loop in js:
+
+there are three things in event loop:
+
+1.execution stack
+
+ a.global execution context- first every line in the code comes into this and any settimeout or api calls goes into next web api's otherwise gives output and vanishes
+ 
+ 2.web API 's - here the function or the code stays till the time interval is completed and then if completed it reaches message queue 
+ 
+  a.setTimeOut()
+  b.Dom
+  c.ajax/api calls
 
 
+3. message queue from here the process repeats again to the execution stack
 
 
+this is called event loop which follows asynchronous programming in javascript.
 
 
 
