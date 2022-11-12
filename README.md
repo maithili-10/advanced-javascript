@@ -299,21 +299,64 @@ this is called event loop which follows asynchronous programming in javascript.
 
 
 
+Function currying:
+
+what is the out put of sum (5)(3)(8)?
+
+this can be acheived with the help of function currying
+
+
+function currying is nothing but evaluating af unction with multiple arguments into sequence of function with single argument.
+
+function sum(num1){
+return function(num2){
+return function (num3){
+console.log(num1,num2,num3);
+}
+}
+}
+
+
+sum(5,3,8)
+
+output:
+
+5,3,8
+
+const sum = (num1) => (num2) => (num3) => console.log(num1 + num2 + num3);
+
+sum(5, 3, 8);
+
+
+output:16
 
 
 
 
+Callback Hell: Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.
+
+example:const animateAll = (animate) => {
+        setTimeout(() => {
+            animate(words[0]);
+            setTimeout(() => {
+                animate(words[1]);
+                setTimeout(() => {
+                    animate(words[2]);
+                }, 1000)
+            }, 1000)
+        }, 1000)
+    }
 
 
 
+ajax/api call through xmlhttprequest method
+
+XMLHttpRequest:The XMLHttpRequest object can be used to exchange data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
+
+AJAX:
 
 
-
-
-
-
-
-
+AJAX stands for Asynchronous JavaScript And XML. In a nutshell, it is the use of the XMLHttpRequest object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files.
 
 
 
