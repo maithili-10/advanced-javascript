@@ -359,7 +359,7 @@ AJAX:
 AJAX stands for Asynchronous JavaScript And XML. In a nutshell, it is the use of the XMLHttpRequest object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files.
 
 
-
+promises:
 
 
 
